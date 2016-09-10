@@ -1,8 +1,10 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+@import url(header.css);
 
 html {
-    color: #222;
-    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    font-size: 14px;
     line-height: 1.4;
 }
 
@@ -56,16 +58,192 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Baloo Tamma', cursive;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eaeaea;
+}
+.sidebar{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border:solid 1px lightgrey;
+    padding:10px;
+}
+.sidebar *{
+    /*border:solid 1px lightgrey;*/
+}
+.widget{border:dotted 1px green}
+.widget h3{
+    text-transform: uppercase;
+    font-size:20px;
+    color: #747474;
+    margin: 0 0 5px;
+    border:solid 1px lightgrey;
+}
+.widget ul{
+    border:dotted 1px red;
+    list-style-type:none;
+    padding-left:0;
+}
+.widget ul li{
+    margin-bottom:10px;
+    padding-left:20px;
+    position: relative;
+}
+.widget ul li:before{
+    content: "\e8e5";
+    position: absolute;
+    left:0;
+    top:3px;
+    width:20px;
+    height: 20px;
+    background-color:red;
+    border-radius:50%;
+    line-height:20px !important;
+    color: #FFF;
+    text-align: center;
+}
+.widget ul li a{
+    text-decoration: none;
+    color: #365899;
+}
 
 
+/*
++++++++++++++++++++++++++++++++++++++++++
+                CSS @ Rules
+@charset
+@import
+@font-face
+@media
+@namespace
+@keyframes
+
++++++++++++++++++++++++++++++++++++++++++
+*/
+@font-face {
+    font-family: 'simple-icons';
+    src:
+        url('../fonts/simple-icons.ttf?vkwtcu') format('truetype'),
+        url('../fonts/simple-icons.woff?vkwtcu') format('woff'),
+        url('../fonts/simple-icons.svg?vkwtcu#simple-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.widget ul li:before{
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'simple-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-
-
-
-
+.icon-call_missed_outgoing:before {
+    content: "\e0e4";
+}
+.icon-details:before {
+    content: "\e3c8";
+}
+.icon-developer_board:before {
+    content: "\e30d";
+}
+.icon-developer_mode:before {
+    content: "\e1b0";
+}
+.icon-device_hub:before {
+    content: "\e335";
+}
+.icon-phonelink:before {
+    content: "\e326";
+}
+.icon-devices_other:before {
+    content: "\e337";
+}
+.icon-directions_walk:before {
+    content: "\e536";
+}
+.icon-disc_full:before {
+    content: "\e610";
+}
+.icon-dns:before {
+    content: "\e875";
+}
+.icon-group_add:before {
+    content: "\e7f0";
+}
+.icon-person_add:before {
+    content: "\e7fe";
+}
+.icon-sentiment_very_dissatisfied:before {
+    content: "\e814";
+}
+.icon-settings_remote:before {
+    content: "\e8c7";
+}
+.icon-signal_wifi_4_bar:before {
+    content: "\e1d8";
+}
+.icon-signal_wifi_4_bar_lock:before {
+    content: "\e1d9";
+}
+.icon-signal_wifi_off:before {
+    content: "\e1da";
+}
+.icon-spa:before {
+    content: "\eb4c";
+}
+.icon-space_bar:before {
+    content: "\e256";
+}
+.icon-speaker:before {
+    content: "\e32d";
+}
+.icon-speaker_group:before {
+    content: "\e32e";
+}
+.icon-timer_10:before {
+    content: "\e423";
+}
+.icon-timer_3:before {
+    content: "\e424";
+}
+.icon-timer_off:before {
+    content: "\e426";
+}
+.icon-traffic:before {
+    content: "\e565";
+}
+.icon-transform:before {
+    content: "\e428";
+}
+.icon-trending_up:before {
+    content: "\e8e5";
+}
 
 
 
