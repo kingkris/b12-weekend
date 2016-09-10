@@ -1,0 +1,63 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+List related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+  list-style-type: disc | circle | square | none ;
+  list-style-type: decimal | lower-alpha | upper-alpha | lower-greek ;
+  list-style-image: ;
+  list-style-position: outside | inside;
+
+  list-style:disc outside;
+
+
+
+auto;
+inherit;
+
+
+*/
+/*----------  Header styles  ----------*/
+
+
+.ul-style-type-demo{
+  list-style-type: decimal;
+  list-style-position: inside;
+
+
+
+  border:solid 1px red;
+  padding-left: 0;
+}
+.ol-style-type-demo{
+  list-style-type: punjabi;
+  list-style-position: inside;
+
+
+
+  border:solid 1px red;
+  padding-left: 0;
+}
+.ul-style-type-demo li{
+  border:solid 1px green;
+}
+
+.ul-style-image-demo{
+  list-style-type: none;
+  list-style-image:url('../img/flake-01.png');
+
+
+
+  border:solid 1px red;
+}
+

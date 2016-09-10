@@ -1,0 +1,237 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+Background related style properties
++++++++++++++++++++++++++++++++++++++++++++
+background-color :transparent ;
+background-image :url(  );
+background-repeat: repeat | no-repeat | repeat-x | repeat-y
+background-attachment:-fixed | scroll
+background-position: ;
+    x y - cordinates
+  keywords, for x - left center right
+            for y - top center bottom
+  in length - 
+  percentage - 
+
+  background :[color] [image] [repeat] [attachment] [position];
+
+
+
+background-size: –contain, cover
+
+background-origin: –border-box, padding-box, content-box
+background-clip: –
+
+multiple backgrounds
+
+
+transparent;
+auto;
+inherit;
+
+
+*/
+
+
+.dabba{
+  border: solid 5px red;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  min-height: 600px;
+
+  background-color: lavender;
+  background-image: url('../img/banner-05.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+}
+
+.dabba2{
+  border: solid 5px red;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  min-height: 900px;
+
+  background-color: wheat;
+  background-image: url('../img/random-shape.png');
+  background-repeat: no-repeat;
+  /*background-position: right bottom;*/
+  /*background-position: 500px 0;*/
+  background-position: 100% 50%;
+}
+
+.wrapper{
+  border: dotted 1px red;
+  background-color: #FFF;
+  padding: 20px
+}
+.box1{
+  height: 18px;
+  margin: 10px;
+  display: inline-block;
+  background-image: url('../img/sprite.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.ico-sign-lang{background-position: 0 0;width: 24px;}
+.ico-anchor{background-position: -24px 0;width: 20px;}
+.ico-victory{background-position: -45px 0;width: 14px;}
+.ico-hearing{background-position: -64px 0;width: 20px;}
+
+.ico-sign-lang:hover{background-position: 0 -60px}
+.ico-anchor:hover{background-position: -24px -60px}
+.ico-victory:hover{background-position: -45px -60px}
+.ico-hearing:hover{background-position: -64px -60px}
+
+.ico-sign-lang:active{background-position: 0 -87px}
+.ico-anchor:active{background-position: -24px -87px}
+.ico-victory:active{background-position: -45px -87px}
+.ico-hearing:active{background-position: -64px -87px}
+
+
+.my-list{
+  list-style: none;
+  padding-left: 0;
+}
+.my-list li{
+  margin: 0 0 10px 0;
+  background-image: url('../img/sprite.png');
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: -84px -68px;
+}
+
+.bg{
+  min-height: 500px;
+  padding: 1px;
+}
+.img1{
+  background-image: url('../img/horse-1210043_1920.jpg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.img1 .bg-content{
+  width: 500px;
+  margin: 50px 0 100px 50px;
+  padding: 30px;
+  background-color: rgba(0,0,0,.5);
+  color: #FFF;
+}
+
+.img2{
+  background-image: url('../img/banner-05.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.img2 .bg-content{
+  width: 400px;
+  margin: 50px 50px 100px 0;
+  padding: 30px;
+  background-color: rgba(0,0,0,.5);
+  color: #FFF;
+  float: right;
+}
+
+
+/*----------  Faces  ----------*/
+.faces{
+  text-align: center;
+  margin: 30px 0;
+}
+.faces .face{
+  width: 150px;
+  height: 150px;
+  border: solid 5px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(../img/faces.jpg);
+  background-repeat: no-repeat;
+}
+
+
+.faces .faceone{background-position: -437px -5px}
+.faces .facetwo{background-position: -608px -31px}
+.faces .facethree{background-position: -364px -114px}
+.faces .facefour{background-position: -510px -186px}
+.faces .facefive{background-position: -686px -144px}
+
+
+/*----------  Face with text  ----------*/
+.faces-with-text{
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 150px 0 5px;
+
+}
+.faces-with-text:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.faces-with-text .face{
+  background-color: #f4e8f6;
+  border-radius: 10px;
+  padding: 10px;
+  border:solid 1px #eaccef;
+  margin: 10px;
+  float: left;
+  width: 16.475%;
+  text-align: center;
+  position: relative;
+}
+.faces-with-text .face:before{
+  width: 150px;
+  height: 150px;
+  background-color: #f0dbf3;
+  border: solid 5px #f0dbf3;
+  border-radius: 50%;
+  background-image: url(../img/faces.jpg);
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  left: 0;right: 0;
+  top: -150px;
+  margin-left: auto;margin-right: auto;
+}
+
+.faces-with-text .faceone:before{background-position: -437px -5px}
+.faces-with-text .facetwo:before{background-position: -608px -31px}
+.faces-with-text .facethree:before{background-position: -364px -114px}
+.faces-with-text .facefour:before{background-position: -510px -186px}
+.faces-with-text .facefive:before{background-position: -686px -144px}
+
+
+/*----------  justr faces  ----------*/
+
+.justfaces{
+  width: 400px;
+  height: 400px;
+  margin: 25px auto;
+  background-color: #FFF;
+  border:solid 10px #FFF;
+  border-radius: 50%;
+  background-image: url('../img/faces.jpg');
+  background-position: -250px -10px;
+  background-size: 200%;
+  -webkit-transition: all 250ms ease;
+          transition: all 250ms ease;
+}

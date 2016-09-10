@@ -1,0 +1,108 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+Block related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+word-spacing      : normal | <length>
+letter-spacing    : normal | <length>
+vertical-align    : baseline | sub | super | text-top | 
+                    text-bottom | middle | top | bottom | <percentage> | <length>
+text-align        : left | right | center | justify
+text-indent       : normal | <length>
+white-space       : normal | pre | nowrap| pre-wrap | pre-line
+display           : block | inline | inline-block | list-item |
+                    table | table-row | table-cell | none
+
+
+content           : 
+text-overflow     : clip | ellipsis
+
+
+
+
+auto;
+inherit;
+
+
+*/
+
+.letter-space-demo{
+  letter-spacing: 10px;
+}
+.word-space-demo{
+  word-spacing: 10px;
+}
+
+.va-demo{
+  text-align: justify;
+  width: 450px;
+  margin: 0 auto;
+  padding: 25px;
+  text-indent: -40px;
+}
+.va-demo img{
+  vertical-align: baseline;
+}
+
+.ws-demo{
+  white-space: pre-wrap;
+}
+
+
+.dabba{
+  border: solid 1px red;
+  padding: 25px;
+  margin: 25px auto;
+  width: 800px;
+  background-color: #fff;
+}
+.box{
+  border: solid 1px green;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+
+  display: block;
+}
+.box:after,
+.box:before{
+  font-size: 11px;
+  font-style: italic;
+}
+
+
+span.box:after{
+  content: " - span";
+}
+div.box:after{
+  content: " - div";
+}
+
+.box:before{
+  content: "dabba - "
+}
+
+
+.header-row{
+  background-color: red;
+  padding: 10px;
+  border: solid 1px green;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 30px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,173 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+POsition related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+position: static | relative | absolute | sticky| fixed
+  Applies to all elements
+  Sticky is CSS3 property, not implemented yet
+
+left:
+top:
+right:
+bottom:;
+  Applies to positioned elements
+
+z-index: auto | <integer>
+  Applies to positioned elements
+
+visibility: visible | hidden | collapse
+  Applies to all elements
+
+overflow: visible | hidden | scroll | auto
+overflow-x
+overflow-y
+
+auto;
+inherit;
+
+*/
+
+
+.content{
+  width: 1000px;
+  margin: 25px auto;
+  background-color: #FFF;
+  padding: 25px;
+  border: solid 1px green;
+}
+.content h2{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+
+
+.orange{background-color: orange}
+.blue{background-color: blue}
+.green{background-color: green}
+.violet{background-color: violet}
+.indigo{background-color: indigo}
+.yellow{background-color: yellow}
+.lightgreen{background-color: lightgreen}
+.lightblue{background-color: lightblue}
+
+
+
+
+.dabba{
+  border: solid 1px red;
+  margin: 5px;
+}
+
+.pos-static-demo .orange{
+  position: static;
+  left: 200px;
+  top: 200px;
+}
+
+.pos-relative-demo .orange{
+  position: relative;
+  top: 25px;
+}
+.pos-relative-demo .green{
+  position: relative;
+  bottom: 25px;
+  top: 20px;
+  left: 50px;
+  right: 50px;
+  z-index: 1;
+}
+.pos-relative-demo .violet{
+  position: relative;
+}
+
+/*----------  Absolute demo  ----------*/
+
+.pos-abs-demo {
+  position: relative;
+}
+.pos-abs-demo .indigo{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pos-abs-demo div.indigo{
+  z-index: 1;
+}
+.circles{
+  width: 500px;
+  height: 500px;
+  border: solid 1px red;
+  margin: 15px auto;
+  position: relative;
+}
+.circle{
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255,0,0,.1);
+  border: solid 5px rgba(255,0,0,.5);
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;bottom: 0;
+}
+
+/*----------  readmore link  ----------*/
+
+.readmore{
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  transition: all 250ms ease;
+}
+.readmore:after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  border-right: solid 1px grey;
+  border-bottom: solid 1px grey;
+  transform: rotate(-45deg);
+  transition: all 250ms ease;
+}
+.readmore:before{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  right: 0;left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  background-color: red;
+  transition: all 250ms ease;
+}
+.readmore:hover:after{
+  right: 0;
+}
+.readmore:hover:before{
+  width: 100%;
+}
+
+
+
+

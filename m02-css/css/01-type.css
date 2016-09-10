@@ -1,0 +1,101 @@
+/*
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+Font related style properties
++++++++++++++++++++++++++++++++++++++++++++
+  font-style: normal | italic | oblique
+  font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+  font-size:
+      px, %, em, rem, vw, vh
+  line-height:
+
+  font-family:
+    font: [font-style font-weight font-size/line-height font-family]
+  text-transform: none | uppercase | lowercase | capitalize
+  color:
+    colornames - eg. red;
+    hex decimal codes - eg. #FF0000
+    hex decimal shorthand property - eg. #F00
+      ff0011 -- f01
+      aa2233 -- a23
+      da1122 -- da1122
+      fafafa -- fafafa
+      fff222 -- fff222
+
+    rgb value - eg. rgb(255,0,0)
+    rgba value - eg. rgba(255,0,0,1)
+  text-decoration:none | underline | overline | line-through
+
+Serif, Sans-serif, cursive, monospace
+
+
+• rgba(); css3
+
+text-shadow – css3
+
+
+auto;
+inherit;
+
+
+*/
+/*----------  Header styles  ----------*/
+
+
+.dabba{
+  border: dashed 1px red;
+  width: 75px;
+  height: 75px;
+  transition: width 400ms ease,  height 400ms ease;
+}
+
+.dabba:hover{
+  width: 150px;
+  height: 150px;
+  border-radius: 25%;
+  background-color: green;
+}
+address{
+  font-style: normal
+}
+
+.font-style-demo{
+  font-style: italic;
+  color: red;
+  font-size: 14px;
+}
+#something{color: orange}
+.font-demo{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'tahoma', arial, verdana, sans-serif;
+
+  /* font: italic 400 20px/26px tahoma, arial, verdana, sans-serif; */
+  color: green;
+}
+
+.font-demo{
+  color: blue;
+}
+
+.asda .dabba:nth-child(odd){
+  border-color:green;
+}
+
+
+.banner h1{
+  color: rgba(255,0, 0,.5);
+  font-size: 150px;
+  line-height: 50px;
+  text-shadow: 1px 1px 50px #FF0808;
+}

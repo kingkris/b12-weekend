@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="252" height="59" viewBox="0 0 252 59">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.4;
+      }
+
+      .cls-2 {
+        opacity: 0.5;
+      }
+
+      .cls-3 {
+        font-size: 72px;
+        fill: #b30707;
+        text-anchor: end;
+        font-family: Roboto;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <image class="cls-1" y="-1" width="252" height="42" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAAAqAgMAAADqot7GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAACzBwcAAAAwymyyAAAAAnRSTlMAZtJCCVUAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAJ0lEQVRIx2MIpQwwjOof1T+qf+D0jwLKwEDH36j+Uf2j+kf1j1D9AL/cBiWJU2rkAAAAAElFTkSuQmCC"/>
+  <image class="cls-2" width="252" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAAALAQMAAABh8nKFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEWzBwcAAAAWzjy9AAAAAXRSTlOArV5bRgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAANSURBVBjTY2AYBXQCAAFrAAEeLuAUAAAAAElFTkSuQmCC"/>
+  <text id="Sachin" class="cls-3" x="254.001" y="76"><tspan x="254.001">Sachin</tspan></text>
+</svg>

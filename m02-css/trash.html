@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		h1 small{display: block;}
+		body{
+			font-family: tahoma, sans-serif;
+			font-size: 14px;
+			color: #444;
+			background-color: #F1FFF6;
+		}
+
+/* 
+Selectors
+++++++++++++++++++++++++++++++++++++++++++++
+
+=========Selector syntax=======
+
+slectorname{
+	css-property-name:value;
+	color:red;
+	...;
+	...;
+	...;
+	...;
+	...;
+	...
+}
+
+	Universal - * (star)
+	Tag - 
+	Class - . (dot)
+	ID - # (hash)
+	Pseudo – 
+			:link, 
+			:hover, 
+      :visited, 
+      :active;
+      :focus,
+      :first-child, 
+      :last-child, 
+      :nth-child, 
+      ::after, 
+      ::before, 
+      ::selection;
+      ::first-line;
+      ::first-letter; …
+	Compound
+	Descendant 
+*/
+::-moz-selection{
+    color: gold;
+    background: red;
+}
+::selection{
+    color: gold;
+    background: red;
+}
+
+/*universal selector*/
+*{ 
+	box-sizing: border-box;
+}
+.banner *{
+	border-bottom: dotted 1px red;
+}
+
+/* Universal reset 
+	*{
+		padding: 0;
+		margin: 0;
+	}
+*/
+h1{
+	font-size: 40px;
+	font-weight: normal;
+	color: red;
+}
+
+h1.heading1{color: orange;}
+h1.heading1:before{content: "Chapter: "}
+
+h1{
+	color: blue;
+}
+/* descendant selector */
+h1 small{
+	font-size: 14px;
+	font-weight: bold;
+	color: green;
+}
+address{
+	font-style: normal;
+}
+.banner{
+	border:solid 5px grey;
+	width: 1000px;
+	margin: 20px auto;
+	background-color: lightblue;
+}
+.banner img{
+	max-width: 100%;
+}
+
+#page-title{
+	text-align: center;
+	font-size: 60px;
+	font-weight: normal;
+	background-color: lightgreen;
+	border-bottom: solid 5px green;
+	padding: 15px;
+	margin: 0;
+}
+.some-list{}
+.some-list li:first-child{color: red}
+.some-list li:last-child{color: green}
+.some-list li:nth-child(3){color: blue}
+.some-list li:nth-child(2n+1){color: purple}
+
+._txt23{
+	text-decoration: underline;
+}
+
+
+	</style>
+</head>
+<body>
+<header>
+	<h1 id="page-title"><img src="img/sachin-png24.png" alt="Sachin"></h1>
+</header>
+
+<section class="banner">
+	<img src="http://fakeimg.pl/1000x350/00CED1/FFF/?text=img+placeholder">
+	<h1>
+		<small>One stop for</small> 
+		college.<br> education.<br> career.
+	</h1>
+	<h2 id="page-title">
+		<small>One stop for</small> 
+		college.<br> education.<br> career.
+	</h2>
+</section>
+<div class="banner">
+	<img src="http://fakeimg.pl/1200x400/3987F1/FFF/?text=Slow+and+steady+wins+the+race">
+</div><!-- /.banner -->
+<h1 class="banner _txt23">
+	thi is a heading with a class banner
+</h1><!-- /.banner -->
+
+<address>
+	<strong>KriShne Gowda NL,</strong><br>
+	#2635, 1<sup>st</sup> floor, 3<sup>rd</sup> cross,<br>
+	18<sup>th</sup> main, Indiranagara,<br>
+	HAL 2<sup>nd</sup> stage, Bengaluru - 560008
+</address>
+<h1>this is another heading tag</h1>
+
+<ul class="some-list">
+  <li>first child</li>
+  <li>Second child</li>
+  <li>Third child</li>
+  <li>... child</li>
+  <li>... child</li>
+  <li>... child</li>
+  <li>... child</li>
+  <li>Last child</li>
+</ul>
+
+
+
+<p class="lead-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero autem velit itaque. Voluptates iste magni quae, velit minus blanditiis asperiores alias quam modi laborum aliquam quia, reprehenderit expedita quidem consequatur. <br />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. In atque, mollitia libero architecto quibusdam sequi non optio quos obcaecati odit quod illo repellendus blanditiis enim, quisquam nemo officiis suscipit dolorem. <br />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quis, delectus praesentium illo molestias quidem, dicta voluptatum facilis tenetur, vitae ducimus quaerat dolor odio pariatur eaque ea eum numquam perspiciatis. <br /></p>
+
+<p>1Lorem ipsum dolor sit amet,                                                   consectetur adipisicing elit, sed do eiusmod
+	2tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+3quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	4consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  5cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    6proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<h1 class="heading1">some heading will com egere</h1>
+<pre>
+1Lorem ipsum dolor sit amet,                                                      consectetur adipisicing elit, sed do eiusmod
+	2tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+3quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	4consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  5cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    6proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</pre>
+<ul>
+	<li>list item01</li>
+	<li>list item02</li>
+	<li>list item03</li>
+	<li>list item04</li>
+	<li>list item05</li>
+	<li>list item06</li>
+	<li>list item07</li>
+	<li>list item08</li>
+	<li>list item09</li>
+	<li>list item10</li>
+</ul>
+</body>
+</html>

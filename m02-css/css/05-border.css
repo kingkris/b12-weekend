@@ -1,0 +1,159 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+Border related style properties
++++++++++++++++++++++++++++++++++++++++++++
+border-style: none solid dotted dashed double ridge groove inset outset
+border-width: pixels 
+border-color: transparent 
+
+border-left-style
+border-left-width
+border-left-color
+
+border-right-style
+border-right-width
+border-right-color
+
+border-top-style
+border-top-width
+border-top-color
+
+border-bottom-style
+border-bottom-width
+border-bottom-color
+
+border:[style] [width] [color];
+  border-left:;
+  border-right:;
+  border-top:;
+  border-bottom:;
+
+
+
+border-radius
+border-image
+
+
+border-collapse:;
+border-spacing:;
+empty-cells: –show | hide
+
+
+
+
+
+auto;
+inherit;
+
+
+*/
+
+/*
+To demo default border color and border width
+
+body{color: violet;}
+.content{color: orange}
+.content2 p,
+.content p{
+  border-style:solid;
+}
+.content li{
+  border-style:solid;
+}
+
+*/
+
+.box{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #FFF;
+  
+  /*border:[style] [width] [color];*/
+  /*border-style: none solid dotted dashed double ridge groove inset outset*/
+  border: outset 10px red ;
+}
+.box2{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #FFF;
+  
+  /*border-top:[style] [width] [color];*/
+  /*border-right:[style] [width] [color];*/
+  /*border-bottom:[style] [width] [color];*/
+  /*border-left:[style] [width] [color];*/
+
+  border-top: dotted 20px blue ;
+  border-right: solid 50px green ;
+  border-bottom: dashed 1px red ;
+  border-left: double 5px orange ;
+  background-image: url('../img/flake-02.png');
+}
+
+.box3{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #666;
+  border-style: solid;
+  border-width: 10px 20px 5px;
+  border-color: red green blue;  
+}
+.box4{
+  width: 0;
+  height: 0;
+  margin: 20px auto;
+  border-style: solid;
+  border-width: 30px;
+  /*border-color: red transparent transparent;  --- TOP*/
+  /*border-color: transparent red transparent transparent; ---RIGHT */
+  border-color: transparent transparent red;  
+  /*border-color: transparent transparent transparent red; ----LEFT */
+}
+
+.button{
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border:solid 3px #555;
+  margin: 20px auto;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+.button:hover{
+  background-color: #FFF;
+  border-color:#f90;
+}
+.button:after{
+  width: 6px;
+  height: 6px;
+  border-bottom: solid 2px #FFF;
+  border-right: solid 2px #FFF;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  transform: rotate(45deg);
+  transition: all 250ms ease;
+}
+.button:hover:after{
+  border-bottom-color: #F90;
+  border-right-color: #F90;
+  transform: rotate(405deg);
+}
+
+
+

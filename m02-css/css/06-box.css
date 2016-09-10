@@ -1,0 +1,128 @@
+/*
+
+Few points to remeber for every property
++++++++++++++++++++++++++++++++++++++++++++++++
+• Default values for different elements
+• Overriding & different values that can be given
+• Inheritence
+• Can they be applied to all elements
+• Can they be animated
+
+
+
+BOX related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+width, min-width, max-width
+height, min-height, max-height 
+overflow: visible | hidden | scroll | auto
+
+padding:
+  padding-top: 10px;
+  padding-right:
+  padding-bottom:
+  padding-left:
+
+Shorthand property
+-----------------------------
+padding:10px; 10px is applied on all the four sides
+padding: 10px 15px; 
+                    10px --> top bottom
+                    15px --> right left
+
+padding: 10px 15px  ; 
+                    10px --> top
+                    15px --> right left
+                    20px --> bottom
+
+padding: 10px 15px 20px 25px; 
+                    10px --> top
+                    15px --> right
+                    20px --> bottom
+                    25px --> left
+
+
+margin
+
+
+
+float : left | right | none
+clear: none | left | right | both
+
+box-sizing: content-box | padding-box | border-box
+resize -none | both | horizontal | vertical 
+opacity 
+
+
+column-count
+  column-gap  
+  column-fill –auto | balance
+  column-rule -<'column-rule-width'> || <'column-rule-style'> || <'column-rule-color'>
+
+Flex-box
+Grids
+
+auto;
+inherit;
+
+*/
+
+.box{
+  background-color: lightgreen;
+  border: solid 1px red;
+  max-width: 800px;
+  padding: 10px;
+  margin: 10px auto;
+  min-height: 50px;
+  max-height: 150px;
+  height: 100px;
+  overflow: auto;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  background-color: white;
+  border: solid 1px red;
+}
+
+
+/*Clear fix*/
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.dabba {
+  background-color: lightblue;
+  border: solid 10px black;
+  margin: 20px;
+}
+
+.boxa{
+  background-color: lightgreen;
+  border:solid 1px green;
+  width: 200px
+}
+.fl{float: left;}
+.fr{float: right;}
+.fl-d{
+  margin: 0;
+  clear: both;
+}
+
+.img{
+  border: solid 1px green;
+}
+.details{
+  border: solid 1px blue;
+  margin-left: 110px;
+}
+
+
+
+.site-footer{
+  padding: 50px 0;
+  border-top: solid 1px grey;
+  margin-top: 50px;
+}
