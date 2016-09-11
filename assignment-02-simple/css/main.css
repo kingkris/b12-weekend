@@ -80,22 +80,17 @@ body{
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    border:solid 1px lightgrey;
     padding:10px;
 }
 .sidebar *{
-    /*border:solid 1px lightgrey;*/
 }
-.widget{border:dotted 1px green}
 .widget h3{
     text-transform: uppercase;
     font-size:20px;
     color: #747474;
     margin: 0 0 5px;
-    border:solid 1px lightgrey;
 }
 .widget ul{
-    border:dotted 1px red;
     list-style-type:none;
     padding-left:0;
 }
@@ -121,6 +116,48 @@ body{
     text-decoration: none;
     color: #365899;
 }
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++
+                Styles for skills
++++++++++++++++++++++++++++++++++++++++++*/
+.container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border:solid 1px red;
+}
+.container:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.skills{
+    border:solid 1px darkred;
+    padding-left:0;
+    list-style-type:none;
+}
+.skills li{
+    border:dashed 1px green;
+    padding-left:50px;
+    float: left;
+    width:25%;
+    position: relative;
+}
+.skills > li > i{
+    position: absolute;
+    left:0;
+    top:15px;
+    font-size:30px;
+    color: red;
+}
+
+
+
+
 
 
 /*
