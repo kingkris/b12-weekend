@@ -44,10 +44,10 @@ inherit;
 }
 
 .va-demo{
-  text-align: justify;
   width: 450px;
   margin: 0 auto;
   padding: 25px;
+  text-align: justify;
   text-indent: -40px;
 }
 .va-demo img{
@@ -60,11 +60,11 @@ inherit;
 
 
 .dabba{
+  background-color: #fff;
   border: solid 1px red;
   padding: 25px;
   margin: 25px auto;
   width: 800px;
-  background-color: #fff;
 }
 .box{
   border: solid 1px green;

@@ -9,13 +9,15 @@ html {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #0F0;
     text-shadow: none;
+    color: red;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #0F0;
     text-shadow: none;
+    color: red;
 }
 
 hr {
@@ -64,7 +66,7 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Baloo Tamma', cursive;
+    font-family: 'Baloo Tamma', serif;
 }
 *,
 *:before,
@@ -121,12 +123,163 @@ body{
 
 
 /*+++++++++++++++++++++++++++++++++++++++++
+                Specificity test on h1
++++++++++++++++++++++++++++++++++++++++++*/
+
+h1{color: green;text-align: center;}
+.heading{color: blue;}
+[title="whatever"]{color: orange}
+#page-title{color: indigo}
+
+.container #page-title{color:yellow;}
+
+.box *{}
+.box .heading{}
+.box #page-title{}
+.box h1{}
+
+
+.wrapper{
+  width: 1000px;
+  margin:20px auto;
+  background-color: #FFF;
+  padding: 12px;
+}
+
+.drop-caps{
+  font-size: 20px;
+  line-height: 26px;
+}
+.drop-caps:first-letter{
+  font-size: 40px;
+  font-family: 'Baloo Tamma', serif;
+  line-height: 26px;
+  color: green;
+}
+.drop-caps:first-line{
+  color: green;
+}
+
+.box1{
+  width: 60px;
+  height: 60px;
+  background-color: wheat;
+  float: left;
+  margin: 0 10px 10px 0;
+  line-height: 60px;
+  text-align: center;
+}
+.box1:first-child{
+  background-color: green;
+}
+.box1:last-child{
+  background-color: indigo;
+}
+.box1:nth-child(2n+1){
+  background-color: orange;
+}
+.box1:nth-child(2n){
+  background-color: indigo;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++
+                Styles for Site-nav
++++++++++++++++++++++++++++++++++++++++++*/
+.kg_site-nav{
+  background-color: #512DA8;
+}
+.kg_site-links{
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+}
+.kg_site-links:after{
+  clear: both;
+  content: '';
+  display: block;
+}
+.kg_site-links > li{
+  float: left;
+  padding-right: 10px;
+  position: relative;
+}
+.kg_site-links > li > a{
+  text-transform: uppercase;
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 0 14px;
+  line-height: 28px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+.kg_site-links > li > a:hover,
+.kg_site-links > li.active > a,
+.kg_site-links > li:hover > a{
+  background-color: #FFF;
+  color: #512DA8
+}
+.kg_site-links > li.has-submenu > a{
+  padding-right: 24px;
+  position: relative;
+}
+.kg_site-links > li.has-submenu > a:after{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: solid 1px #FFF;
+  border-bottom: solid 1px #FFF;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: rotate(45deg);
+}
+.kg_site-links > li.has-submenu:hover > a:after{
+  border-right-color: #512DA8;
+  border-bottom-color: #512DA8;
+}
+/*----------  Submenu  ----------*/
+
+.kg_site-links ul{
+  margin: 0;
+  padding: 12px 4px 15px;
+  list-style-type: none;
+  background-color: #512DA8;
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 150px;
+  border-radius: 0 0 15px 15px;
+  display: none;
+}
+.kg_site-links li:hover ul{
+  display: block;
+}
+.kg_site-links ul li a{
+  color:#FFF;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  line-height: 28px;
+  padding: 0 10px;
+}
+.kg_site-links ul li a:hover{
+  border-radius: 4px;
+  color:#555;
+  background-color: #FFF;
+}
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++
                 Styles for skills
 +++++++++++++++++++++++++++++++++++++++++*/
 .container{
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+
     border:solid 1px red;
 }
 .container:after{
