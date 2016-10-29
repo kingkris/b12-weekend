@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Introduction to less</title>
+	<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+
+	<script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ":/a.com/"
+	  };
+	</script>
+	<script src="less.min.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+		<header class="site-header">
+			<h1 class="logo">LESSly <small>very very less coding</small></h1>
+			<nav>
+				<ul class="site-menu">
+					<li><a href="#">link01</a></li>
+					<li><a href="#">link02</a></li>
+					<li><a href="#">link03</a></li>
+					<li><a href="#">link04</a></li>
+					<li><a href="#">link05</a></li>
+					<li><a href="#">link06</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="hero-banner">
+			<figure class="slide">
+				<img src="https://api.fnkr.net/testimg/1000x400/00CED1/FFF/?text=very+very+LESSly">
+				<figcaption>
+					<h2>I continue to be drawn to clarity and simplicity. 'Less is more' remains my mantra.</h2>
+				</figcaption>
+			</figure>
+		</div><!-- eo hero-banner -->
+		
+	</div><!-- eo container -->
+</body>
+</html>

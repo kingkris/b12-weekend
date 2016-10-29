@@ -1,0 +1,44 @@
+.borders {
+  border: solid 1px #00CED1;
+  border-radius: 5px;
+}
+body {
+  background-color: #d88be5;
+}
+.site-header {
+  background-color: #771e86;
+  border: solid 1px #00CED1;
+  border-radius: 5px;
+  border-bottom-width: 5px;
+}
+.site-menu {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.site-menu li {
+  display: inline-block;
+}
+.site-menu li a {
+  border: solid 1px #00CED1;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+}
+.site-menu li a:hover {
+  background-color: #FFF;
+  color: #9C27B0;
+}
+.slide {
+  border: solid 1px #00CED1;
+  border-radius: 5px;
+  margin: 0;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+/*# sourceMappingURL=styles.css.map */
