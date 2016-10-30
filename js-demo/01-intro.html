@@ -14,30 +14,47 @@
   <link rel="shortcut icon" href="favicon.ico">
 
 
-  <script src="01-demo.js" async defer></script>
-  <script>
-    console.log('hey hi, you enetered');
-    var usertext;
-    var message = 'What is your name?';
-    usertext = prompt(message);
-    console.log(usertext);
-    usertext = 'Hey <strong class="">' + usertext + '</strong>, welcome to the world of internet!';
-    console.log(usertext);
-    oldtext = document.getElementById('text-holder').innerHTML;
-    alert(oldtext);
-    document.getElementById('text-holder').innerHTML = usertext
+<script>
 
-    // Single line comment
+var x;
+inputmessage = 'what ever';
+usernumber = 20;
+total = usernumber;
+newtotal = 'usernumber';
+newnumber = '30';
+x = 20;
+y = 'xy';
 
 
-    /*
-    and
-    a
-    multiline
-    comment
-    */
+console.log(x + inputmessage);
+console.log(x + usernumber);
+console.log(x + total);
+console.log(x + newtotal);
+console.log(inputmessage + newtotal);
+console.log(newnumber + total);
+console.log(total + newnumber);
+console.log('------------------------------------------');
 
-  </script>
+console.log(x++);
+console.log(++x);
+console.log(x--);
+console.log(--x);
+
+x += x; //x = x + x
+console.log(x);
+
+x -= x; //x = x - x
+console.log(x);
+
+x = 10;
+y = 20;
+z = x + y;
+
+i = ((x + y + z) * y) / (2 + 4);
+console.log(i)
+
+
+</script>
 
 </head>
 <body>
@@ -49,7 +66,7 @@
 <header class="site-header">
   <div class="container">
     <h1>Musically <small>anytime, everywhere</small></h1>
-    <div class="hamburger">
+    <div class="hamburger" >
       <span></span>
       <span></span>
       <span></span>

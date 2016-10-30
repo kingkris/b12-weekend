@@ -128,7 +128,7 @@ small, .font_small {font-size: 0.707em;}
   line-height: 40px;
   color: #FFF;
   float: left;
-  transition: all 250ms ease;
+  transition: all 250ms ease-in;
 }
 @media (min-width: 980px) {
   .site-header h1{
@@ -156,6 +156,13 @@ small, .font_small {font-size: 0.707em;}
     margin: 35px 15px 0 0;
     position: relative;
     cursor: pointer;
+    z-index: 11;
+    transition:all 300ms ease-in;
+
+  }
+  .hamburger.close{
+    border-radius: 50%;
+    height:34px;
   }
   .hamburger span{
     width: 22px;
@@ -163,83 +170,118 @@ small, .font_small {font-size: 0.707em;}
     background-color: #FFF;
     position: absolute;
     left: 4px;
+    transition:all 300ms ease-in;
   }
   .hamburger span:first-child{top: 4px;}
   .hamburger span:nth-child(2){top: 11px;}
   .hamburger span:last-child{top: 18px;}
+
+
+  .hamburger.close span:first-child{
+    transform:rotate(45deg);
+    top:14px;
+  }
+  .hamburger.close span:nth-child(2){
+    left:-100px;
+    opacity: 0;
+
+  }
+  .hamburger.close span:last-child{
+    transform:rotate(-45deg);
+    top:14px;
+  }
 }
 @media (min-width:768px ) {
   .hamburger{display: none;}
 }
-.site-header nav{
-  float: right;
-}
-
-.site-header nav{
-  display: none;
-}
-@media (min-width: 768px) {
-  .site-header nav{
-    float: right;
-    display: block;
-  }
+@media (max-width:767px){
+ .site-header nav{
+   position: absolute;
+   background-color:rgba(0,0,0,.5);
+   top:0;
+   right:0;
+   width:200px;
+   padding-bottom:20px;
+   z-index: 10;
+   display: none;
+ }
 }
   .site-links{
-    margin: 0;
-    padding:50px 15px 15px;
+    margin: 0 0 20px;
+    padding:80px 15px 0;
     list-style-type: none;
   }
   .site-links > li{
-    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+  }
+@media (min-width: 768px) {
+  .site-header nav{
+    float: right;
+    display: block !important;
+  }
+  .site-links{
+    padding:50px 15px 0;
+  }
+  .site-links > li{
     padding: 0 0 0 10px;
     position: relative;
+    float: left;
   }
-  .site-links > li > a{
-    color: #FFF;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 300ms ease;
-    padding: 3px 14px;
-    border-radius: 15px;
-    position: relative;
-  }
-  .site-links li.active a,
-  .site-links li a:hover{
-    background-color: #FFA000;
-  }
-  .site-links li.has-menu > a{
-    padding-right: 24px;
-  }
-  .site-links li.has-menu > a:after{
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-right: solid 1px #FFF;
-    border-bottom: solid 1px #FFF;
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    transform: rotate(45deg);
-  }
+
+}
+.site-links > li > a{
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 300ms ease;
+  padding: 3px 14px;
+  border-radius: 15px;
+  position: relative;
+  display: block;
+}
+.site-links li.active a,
+.site-links li a:hover{
+  background-color: #FFA000;
+}
+.site-links li.has-menu > a{
+  padding-right: 24px;
+}
+.site-links li.has-menu > a:after{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: solid 1px #FFF;
+  border-bottom: solid 1px #FFF;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  transform: rotate(45deg);
+}
+.site-links li ul{
+  position: relative;
+  display: none;
+  z-index: 1;
+  list-style-type: none;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
   .site-links li ul{
     position: absolute;
-    display: none;
-    z-index: 1;
-    list-style-type: none;
-    padding-left: 0;
-    background-color: #FFA000;
-    left: 20px;
-    top: 20px;
-    width: 150px;
+    background-color:#FFA000;
   }
+}
   .site-links li:hover ul{
     display: block;
   }
   .site-links li ul a{
     display: block;
     line-height: 28px;
-    border-bottom: solid 1px #CCC;
     padding: 0 10px;
+    color:#FFF;
+    text-decoration: none;
+    font-size:14px;
+    text-transform: none;
   }
 
 

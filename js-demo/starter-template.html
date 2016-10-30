@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Introduction to Javascript</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,34 +11,8 @@
   <link rel="stylesheet" href="css/main.css">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab" rel="stylesheet"> 
-  <link rel="shortcut icon" href="favicon.ico">
 
-
-  <script src="01-demo.js" async defer></script>
-  <script>
-    console.log('hey hi, you enetered');
-    var usertext;
-    var message = 'What is your name?';
-    usertext = prompt(message);
-    console.log(usertext);
-    usertext = 'Hey <strong class="">' + usertext + '</strong>, welcome to the world of internet!';
-    console.log(usertext);
-    oldtext = document.getElementById('text-holder').innerHTML;
-    alert(oldtext);
-    document.getElementById('text-holder').innerHTML = usertext
-
-    // Single line comment
-
-
-    /*
-    and
-    a
-    multiline
-    comment
-    */
-
-  </script>
-
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 9]>
@@ -56,7 +30,7 @@
     </div>
     <nav>
       <ul class="site-links">
-        <li class="active"><a href="http://www.htmlden.com/" accesskey="a" tabindex="2" onclick="return void;alert('hey hi');">Home</a></li>
+        <li class="active"><a href="http://www.htmlden.com/" accesskey="a" tabindex="2">Home</a></li>
         <li class="has-menu"><a href="#">Portfolio</a>
           <ul class="submenu">
             <li><a href="#">Webdesign</a></li>
@@ -84,16 +58,19 @@
         srcset="img/happy-girls-mob.jpg 1x, img/happy-girls-retina.jpg 2x">
       <img src="happy-girls-desk.jpg" alt="">
     </picture>
-    <h2>Sing &amp; Dance <strong>at will, whenever, where ever</strong></h2>
+    <h2>The Most <strong>Wanted Bijouterie</strong></h2>
   </div><!-- eo slide #slide01-->
 </div><!-- eo banner -->
 
-<div class="conatiner">
-  <h2 id="text-holder">This text <strong>will be</strong> replaced</h2>
-</div>
 
 
 
 
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

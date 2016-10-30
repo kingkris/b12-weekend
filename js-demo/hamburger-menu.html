@@ -14,30 +14,6 @@
   <link rel="shortcut icon" href="favicon.ico">
 
 
-  <script src="01-demo.js" async defer></script>
-  <script>
-    console.log('hey hi, you enetered');
-    var usertext;
-    var message = 'What is your name?';
-    usertext = prompt(message);
-    console.log(usertext);
-    usertext = 'Hey <strong class="">' + usertext + '</strong>, welcome to the world of internet!';
-    console.log(usertext);
-    oldtext = document.getElementById('text-holder').innerHTML;
-    alert(oldtext);
-    document.getElementById('text-holder').innerHTML = usertext
-
-    // Single line comment
-
-
-    /*
-    and
-    a
-    multiline
-    comment
-    */
-
-  </script>
 
 </head>
 <body>
@@ -92,6 +68,11 @@
   <h2 id="text-holder">This text <strong>will be</strong> replaced</h2>
 </div>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 
 
