@@ -14,6 +14,42 @@
   <link rel="shortcut icon" href="favicon.ico">
 
 
+<script>
+
+function printmsg() {
+  alert('Hey hello');
+}
+
+window.onload = function () {
+  alert('document loaded');
+  printmsg();
+};
+
+function addNumbers() {
+  x = 20;
+  y = 30;
+  z = x + y;
+  return z;
+}
+function addNumber(a,b) {
+  x = a;
+  y = b;
+  z = x + y;
+  return z;
+}
+
+function printXYZ() {
+  i = addNumber(23,23);
+  document.getElementById('whatever').innerHTML += i;
+  div = document.getElementById('gamedabba');
+  div.style.backgroundColor = 'green';
+  div.style.borderBottomWidth = '5px';
+  div.style.borderBottomStyle = 'solid';
+  div.style.color = '#F0F';
+}
+
+</script>
+
 
 
 </head>
@@ -68,9 +104,9 @@
 <style>
   .games-dabba{
     padding: 20px;
-    width: 50%;
+    width: 49%;
     border-radius: 20px;
-    min-height: 25  0px;
+    min-height: 250px;
     margin: 20px 0;
   }
   .pointsarea{
@@ -103,71 +139,38 @@
 
 <div class="container">
   <h2>The <strong>Flip Game</strong></h2>
-  <div class="pointsarea games-dabba">
+  <div class="pointsarea games-dabba" id="gamedabba">
     <p>Number of time the coin is flipped: <span id="gamesplayed"></span></p>
     <p>Number of times you won: <span id="gameswon"></span></p>
-    <p>Number of times you lost: <span id="gameslost"></span></p>
+    <p>Number of times you lost: 
+      <span id="gameslost">
+        <script>
+          document.write(addNumbers())
+        </script>
+      </span>
+      <span>
+        <script>
+          document.write(addNumber(23,45))
+        </script>
+      </span>
+      <span>
+        <script>
+          document.write(addNumber(12345,100000))
+        </script>
+      </span>
+    </p>
     <p>Success rate: <span id="suucessrate"></span></p>
 
   </div>
 
   <div class="gamearea games-dabba" id="gamesarea">
-
+    <a href="#" onclick="printmsg();">Check your luck</a>
+    <a href="#" onclick="printXYZ();">Check your luck</a>
+    <div id="whatever"></div>
   </div>
+  <h1 id="result"></h1>
 
 </div>
-
-<script>
-  games = 0;
-  won = 0;
-  lost = 0;
-
-min = 0;
-max = 1;
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-    console.log('before start won : ' + won);
-    console.log('before start lost : ' + lost);
-
-while (won<2) {
-//  x = getRandomIntInclusive(min, max);
-  x = Math.floor(Math.random() * (max - min + 1)) + min;
-  ++games;
-  if(x == 1){
-    ++won;
-    text = '<span class="win">W</span>'
-  } else{
-    ++lost;
-    text = '<span class="lost">L</span>'
-  } // eo if - else
-  document.getElementById('gamesarea').innerHTML += text;
-} // eo while loop
-    
-  document.getElementById('gamesplayed').innerHTML = games;
-  document.getElementById('gameswon').innerHTML = won;
-  document.getElementById('gameslost').innerHTML = lost;
-  succes = (won/games)*100;
-  document.getElementById('suucessrate').innerHTML = succes + '%';
-
-xy = 0;
-while (xy < 3) {
-  xy++;
-  console.log('inside while loop: ' + xy);
-}
-
-yz = 0;
-do{
-  yz++;
-  console.log('inside DO while loop: ' + yz);
-} while (yz < 3);
-
-
-</script>
-
 
 
 

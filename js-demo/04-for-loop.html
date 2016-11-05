@@ -118,57 +118,12 @@
 </div>
 
 <script>
-  games = 0;
-  won = 0;
-  lost = 0;
-
-min = 0;
-max = 1;
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  
+for (i = 1; i <= 10; i++) {
+  console.log('2 x ' + i + ' = ' + (i * 2));
 }
-    console.log('before start won : ' + won);
-    console.log('before start lost : ' + lost);
-
-while (won<2) {
-//  x = getRandomIntInclusive(min, max);
-  x = Math.floor(Math.random() * (max - min + 1)) + min;
-  ++games;
-  if(x == 1){
-    ++won;
-    text = '<span class="win">W</span>'
-  } else{
-    ++lost;
-    text = '<span class="lost">L</span>'
-  } // eo if - else
-  document.getElementById('gamesarea').innerHTML += text;
-} // eo while loop
-    
-  document.getElementById('gamesplayed').innerHTML = games;
-  document.getElementById('gameswon').innerHTML = won;
-  document.getElementById('gameslost').innerHTML = lost;
-  succes = (won/games)*100;
-  document.getElementById('suucessrate').innerHTML = succes + '%';
-
-xy = 0;
-while (xy < 3) {
-  xy++;
-  console.log('inside while loop: ' + xy);
-}
-
-yz = 0;
-do{
-  yz++;
-  console.log('inside DO while loop: ' + yz);
-} while (yz < 3);
-
 
 </script>
-
-
 
 
 </body>

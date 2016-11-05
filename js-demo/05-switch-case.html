@@ -68,9 +68,9 @@
 <style>
   .games-dabba{
     padding: 20px;
-    width: 50%;
+    width: 49%;
     border-radius: 20px;
-    min-height: 25  0px;
+    min-height: 250px;
     margin: 20px 0;
   }
   .pointsarea{
@@ -114,6 +114,7 @@
   <div class="gamearea games-dabba" id="gamesarea">
 
   </div>
+  <h1 id="result"></h1>
 
 </div>
 
@@ -153,17 +154,46 @@ while (won<2) {
   succes = (won/games)*100;
   document.getElementById('suucessrate').innerHTML = succes + '%';
 
-xy = 0;
-while (xy < 3) {
-  xy++;
-  console.log('inside while loop: ' + xy);
-}
+  if (succes > 0 && succes < 25) {
+    success_txt = 'Charcoal';
+  } else if(succes >= 25 && succes < 50){
+    success_txt = 'Silver';
+  } else if(succes >= 50 && succes < 70){
+    success_txt = 'Gold';
+  } else if(succes >= 70 && succes < 90){
+    success_txt = 'Platinum';
+  } else {
+    success_txt = 'Supreme';
+  }
 
-yz = 0;
-do{
-  yz++;
-  console.log('inside DO while loop: ' + yz);
-} while (yz < 3);
+  result_msg = success_txt;
+
+  switch (success_txt) {
+    case 'Charcoal':
+      result_msg += ': The day seems burning, do not step out';
+      break;
+    case 'Silver':
+      result_msg += ': Still hot, do not go out';
+      break;
+    case 'Gold':
+      result_msg += ': Might be 50 - 50 try out your luck';
+      break;
+    case 'Platinum':
+      result_msg += ': Chances are high, go play the game';
+      break;
+    case 'Supreme':
+      result_msg += ': You are on loot, do what ever';
+      break;
+    default:
+      result_msg += ': Not the right option';
+      break;
+  }
+
+
+
+
+    document.getElementById('result').innerHTML = result_msg;
+
 
 
 </script>

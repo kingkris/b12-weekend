@@ -66,38 +66,45 @@
 </div><!-- eo banner -->
 
 <style>
-  .games-dabba{
-    padding: 20px;
-    width: 50%;
+  #tables{
+    padding: 15px;
     border-radius: 20px;
     min-height: 25  0px;
     margin: 20px 0;
-  }
-  .pointsarea{
     background-color: wheat;
-    float: right;
   }
-  .gamearea{
-    background-color: lightblue;
+  #tables ul{
+    padding: 15px ;
     float: left;
+    width: 20%;
+    list-style: none;
+    margin: 0;
   }
-  .games-dabba:after{
+  #tables ul li{
+    padding: 0 10px 10px 25px;
+  }
+  #tables ul li:last-child{
+    border-radius: 0 0 15px 15px
+  }
+  #tables ul:nth-child(even) li{
+    background-color: lightgreen;
+  }
+  #tables ul:nth-child(odd) li{
+    background-color: lightblue;
+  }
+  #tables:after{
     clear: both;
     content: "";
     display: block;
   }
-  .gamearea > span{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
+  #tables ul li.table-head{
+    border-bottom: double 3px green;
+    background-color: crimson;
     color: #FFF;
-    float: left;
-    margin-right: 10px;
+    font-size: 24px;
+    border-radius: 15px 15px 0 0;
+    padding:15px 15px 10px;
   }
-  .win{background-color: green;}
-  .lost{background-color: red;}
 </style>
 
 
@@ -111,64 +118,28 @@
 
   </div>
 
-  <div class="gamearea games-dabba" id="gamesarea">
+  <div id="tables">
 
   </div>
 
 </div>
 
 <script>
-  games = 0;
-  won = 0;
-  lost = 0;
+  for(j = 1; j <= 10; j++){
+    tableid = 'table' + j;
 
-min = 0;
-max = 1;
+    document.getElementById('tables').innerHTML += '<ul id="'+ tableid +'">';
+    document.getElementById(tableid).innerHTML += '<li class="table-head">Table of ' + j + '</li>';
 
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-    console.log('before start won : ' + won);
-    console.log('before start lost : ' + lost);
+    for (i = 1; i <= 10; i++) {
+      document.getElementById(tableid).innerHTML += '<li>' + j +' x ' + i + ' = ' + (i * j) + '</li>';
+    }
+    document.getElementById('tables').innerHTML += '</ul>'; 
+  }
 
-while (won<2) {
-//  x = getRandomIntInclusive(min, max);
-  x = Math.floor(Math.random() * (max - min + 1)) + min;
-  ++games;
-  if(x == 1){
-    ++won;
-    text = '<span class="win">W</span>'
-  } else{
-    ++lost;
-    text = '<span class="lost">L</span>'
-  } // eo if - else
-  document.getElementById('gamesarea').innerHTML += text;
-} // eo while loop
-    
-  document.getElementById('gamesplayed').innerHTML = games;
-  document.getElementById('gameswon').innerHTML = won;
-  document.getElementById('gameslost').innerHTML = lost;
-  succes = (won/games)*100;
-  document.getElementById('suucessrate').innerHTML = succes + '%';
-
-xy = 0;
-while (xy < 3) {
-  xy++;
-  console.log('inside while loop: ' + xy);
-}
-
-yz = 0;
-do{
-  yz++;
-  console.log('inside DO while loop: ' + yz);
-} while (yz < 3);
 
 
 </script>
-
-
 
 
 </body>
