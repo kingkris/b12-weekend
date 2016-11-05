@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to Javascript</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab" rel="stylesheet"> 
+  <link rel="shortcut icon" href="favicon.ico">
+
+
+
+
+</head>
+<body>
+<!--[if lt IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<header class="site-header">
+  <div class="container">
+    <h1>Musically <small>anytime, everywhere</small></h1>
+    <div class="hamburger" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul class="site-links">
+        <li class="active"><a href="http://www.htmlden.com/" accesskey="a" tabindex="2" onclick="return void;alert('hey hi');">Home</a></li>
+        <li class="has-menu"><a href="#">Portfolio</a>
+          <ul class="submenu">
+            <li><a href="#">Webdesign</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Wordpress</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#" tabindex="3">Blog</a></li>
+        <li><a href="#" tabindex="1">Hire me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><!-- eo site-header -->
+
+<div class="banner">
+  <div class="slide" id="slide01">
+    <picture>
+      <source media="(min-width: 980px)"
+        srcset="img/happy-girls-desk.jpg">
+      <source media="(min-width: 640px)"
+        srcset="img/happy-girls-tab.jpg">
+      <source 
+        srcset="img/happy-girls-mob.jpg 1x, img/happy-girls-retina.jpg 2x">
+      <img src="happy-girls-desk.jpg" alt="">
+    </picture>
+    <h2>Sing &amp; Dance <strong>at will, whenever, where ever</strong></h2>
+  </div><!-- eo slide #slide01-->
+</div><!-- eo banner -->
+
+<style>
+  .games-dabba{
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    min-height: 25  0px;
+    margin: 20px 0;
+  }
+  .pointsarea{
+    background-color: wheat;
+    float: right;
+  }
+  .gamearea{
+    background-color: lightblue;
+    float: left;
+  }
+  .games-dabba:after{
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .gamearea > span{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: #FFF;
+    float: left;
+    margin-right: 10px;
+  }
+  .win{background-color: green;}
+  .lost{background-color: red;}
+</style>
+
+
+<div class="container">
+  <h2>The <strong>Flip Game</strong></h2>
+  <div class="pointsarea games-dabba">
+    <p>Number of time the coin is flipped: <span id="gamesplayed"></span></p>
+    <p>Number of times you won: <span id="gameswon"></span></p>
+    <p>Number of times you lost: <span id="gameslost"></span></p>
+    <p>Success rate: <span id="suucessrate"></span></p>
+
+  </div>
+
+  <div class="gamearea games-dabba" id="gamesarea">
+
+  </div>
+
+</div>
+
+<script>
+  games = 0;
+  won = 0;
+  lost = 0;
+
+min = 0;
+max = 1;
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    console.log('before start won : ' + won);
+    console.log('before start lost : ' + lost);
+
+while (won<2) {
+//  x = getRandomIntInclusive(min, max);
+  x = Math.floor(Math.random() * (max - min + 1)) + min;
+  ++games;
+  if(x == 1){
+    ++won;
+    text = '<span class="win">W</span>'
+  } else{
+    ++lost;
+    text = '<span class="lost">L</span>'
+  } // eo if - else
+  document.getElementById('gamesarea').innerHTML += text;
+} // eo while loop
+    
+  document.getElementById('gamesplayed').innerHTML = games;
+  document.getElementById('gameswon').innerHTML = won;
+  document.getElementById('gameslost').innerHTML = lost;
+  succes = (won/games)*100;
+  document.getElementById('suucessrate').innerHTML = succes + '%';
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
