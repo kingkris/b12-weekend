@@ -85,10 +85,38 @@
 </div><!-- eo banner -->
 
 <div class="conatiner">
-  <h2 id="text-holder">This text <strong>will be</strong> replaced</h2>
+  <h2 id="text-holder" class="quote">This text <strong>will be</strong> replaced</h2>
 </div>
 
+<style>
+.quote-l{
+  display: block;
+  font-size: .5em;
+  text-transform: uppercase;
+} 
+.highlite{
+  border-bottom: solid 1px red;
+  background-color: lightgreen;
+}
+.quote small{
+  font-weight: normal;
+  font-size: .75em
+}
+.quote strong{
+  font-weight: normal;
+  font-size: 1.5em
+}
+  
+</style>
 
+
+
+<script>
+
+
+  message = '<span class="quote-l">Whatever you think that you will be.</span> if you think yourself <span class="highlite">weak</span>, <small>weak you will be</small>;<br> if you think yourself <span class="highlite">strong</span>, <strong>strong you will be</strong>';
+  document.getElementById('text-holder').innerHTML = message;
+</script>
 
 
 </body>
