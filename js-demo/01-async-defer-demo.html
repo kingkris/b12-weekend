@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to Javascript</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab" rel="stylesheet"> 
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <script src="01-async-defer-demo.js" async defer></script>
+
+
+</head>
+<body>
+<!--[if lt IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<header class="site-header">
+  <div class="container">
+    <h1>Musically <small>anytime, everywhere</small></h1>
+    <div class="hamburger" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul class="site-links">
+        <li class="active"><a href="http://www.htmlden.com/" accesskey="a" tabindex="2" onclick="return void;alert('hey hi');">Home</a></li>
+        <li class="has-menu"><a href="#">Portfolio</a>
+          <ul class="submenu">
+            <li><a href="#">Webdesign</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Wordpress</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#" tabindex="3">Blog</a></li>
+        <li><a href="#" tabindex="1">Hire me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><!-- eo site-header -->
+
+<div class="banner">
+  <div class="slide" id="slide01">
+    <picture>
+      <source media="(min-width: 980px)"
+        srcset="img/happy-girls-desk.jpg">
+      <source media="(min-width: 640px)"
+        srcset="img/happy-girls-tab.jpg">
+      <source 
+        srcset="img/happy-girls-mob.jpg 1x, img/happy-girls-retina.jpg 2x">
+      <img src="happy-girls-desk.jpg" alt="">
+    </picture>
+    <h2>Sing &amp; Dance <strong>at will, whenever, where ever</strong></h2>
+  </div><!-- eo slide #slide01-->
+</div><!-- eo banner -->
+
+<div class="conatiner">
+  <h2 id="text-holder">This text <strong>will be</strong> replaced</h2>
+</div>
+
+
+
+
+</body>
+</html>
