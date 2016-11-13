@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to JQuery</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab" rel="stylesheet"> 
+  <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+<body>
+<!--[if lt IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<header class="site-header">
+  <div class="container">
+    <h1>Musically <small>anytime, everywhere</small></h1>
+    <div class="hamburger" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul class="site-links">
+        <li class="active">
+          <a href="#" >Home</a>
+        </li>
+        <li class="has-menu"><a href="#">Portfolio</a>
+          <ul class="submenu">
+            <li><a href="#">Webdesign</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Wordpress</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#" tabindex="3">Blog</a></li>
+        <li><a href="#" tabindex="1">Hire me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><!-- eo site-header -->
+
+<div class="banner">
+  <div class="slide" id="slide01">
+    <picture>
+      <source media="(min-width: 980px)"
+        srcset="img/happy-girls-desk.jpg">
+      <source media="(min-width: 640px)"
+        srcset="img/happy-girls-tab.jpg">
+      <source 
+        srcset="img/happy-girls-mob.jpg 1x, img/happy-girls-retina.jpg 2x">
+      <img src="happy-girls-desk.jpg" alt="">
+    </picture>
+    <h2>Sing &amp; Dance <strong>at will, whenever, where ever</strong></h2>
+  </div><!-- eo slide #slide01-->
+</div><!-- eo banner -->
+
+<style>
+.container:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+.container hr{
+  clear: both;
+}
+
+  *{box-sizing: border-box;}
+  .game-dabba{
+    width: 50%;
+    float: left;
+    padding: 20px;
+  }
+  .points-area,
+  .results-area{
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 300px;
+  }
+  .points-area{background-color: #BDDFFF}
+  .results-area{background-color: #FFBDF5}
+  .loading{display: none;}
+</style>
+
+<div class="container">
+  <h2>The <strong>Flip Game</strong></h2>
+  <div class="game-dabba">
+    <div class="points-area">
+      <h1>Do you want to play now!</h1>
+      <a href="#" class="start">Why not, let me try my luck!</a>
+    </div><!-- /.points-area -->
+  </div>
+  <div class="game-dabba">
+    <div class="results-area">
+      <div class="results"></div>
+      <div class="loading"><img src="img/cat.gif" alt=""></div>
+    </div><!-- /.results-area -->
+  </div>
+<hr>
+</div><!-- eo container -->
+
+<style>
+  .tab-wrap{
+    padding: 30px;
+    background-color: #F3EEFF;
+    border-radius: 10px;
+  }
+  .tabz{
+    padding-left: 20px;
+    margin: 0;
+    list-style: none;
+    border-bottom: solid 4px #D7CEFF;
+  }
+  .tabz:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .tabz li{
+    float: left;
+  }
+  .tabz li a{
+    display: block;
+    padding: 0 15px 0;
+    line-height: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #444;
+    border-radius: 5px 5px 0 0;
+    border-top: solid 4px transparent;
+    margin-top: 4px;
+  }
+  .tabz li a:hover{
+    background-color: #D7CEFF;
+  }
+  .tabz li.active a{
+    background-color: #D7CEFF;
+    border-top-color: #BDAEFF;
+    padding-top: 4px;
+    margin-top: 0;
+  }
+  .tab-wrap .content{
+    background-color: #D7CEFF;
+    padding: 20px;
+    display: none;
+  }
+  .tab-wrap .content.active{
+    display: block;
+  }
+  .tab-wrap .content h3{
+    margin-top: 0;
+    border-bottom: solid 5px #6F01BC;
+    line-height: 60px;
+    color: #6F01BC;
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style>
+
+<div class="container">
+  <h2>my tabs</h2>
+  <div class="tab-wrap">
+    <ul class="tabz">
+      <li class="active"><a href="#tab1">Tab1</a></li>
+      <li><a href="#tab2"><span>Tab</span> Two</a></li>
+      <li><a href="#tab3">Tab Three</a></li>
+      <li><a href="#tab4">4</a></li>
+      <li><a href="#tab5">Fifth One</a></li>
+    </ul>
+    <div class="content active" id="tab1">
+      <h3>Tab One</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat harum voluptatibus, assumenda hic quod, nihil temporibus adipisci totam nostrum error exercitationem sunt maxime esse ipsum. Libero repellendus molestias, dolorum!</p>
+    </div><!-- eo #tab1 -->
+    <div class="content" id="tab2">
+      <h3>Tab Two</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat harum voluptatibus, assumenda hic quod, nihil temporibus adipisci totam nostrum error exercitationem sunt maxime esse ipsum. Libero repellendus molestias, dolorum!</p>
+    </div><!-- eo #tab2 -->
+    <div class="content" id="tab3">
+      <h3>Tab Three</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat harum voluptatibus, assumenda hic quod, nihil temporibus adipisci totam nostrum error exercitationem sunt maxime esse ipsum. Libero repellendus molestias, dolorum!</p>
+    </div><!-- eo #tab3 -->
+    <div class="content" id="tab4">
+      <h3>Tab Four</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat harum voluptatibus, assumenda hic quod, nihil temporibus adipisci totam nostrum error exercitationem sunt maxime esse ipsum. Libero repellendus molestias, dolorum!</p>
+    </div><!-- eo #tab4 -->
+    <div class="content" id="tab5">
+      <h3>Tab Five</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat harum voluptatibus, assumenda hic quod, nihil temporibus adipisci totam nostrum error exercitationem sunt maxime esse ipsum. Libero repellendus molestias, dolorum!</p>
+    </div><!-- eo #tab5 -->
+  </div><!-- eo tab-wrap -->
+</div><!-- eo container -->
+
+
+
+
+<script src="js/vendor/jquery-3.1.1.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+    $('.start').click(function(event) {
+      event.preventDefault();
+      i = zeroOrOne();
+      j = zeroOrOne(1,10);
+      markup = '<p>Value of i = ' + i + '</p>';
+      markup += '<p>Value of j = ' + j + '</p>';
+      $('.results').html(markup);
+      ans = confirm('Are you sure?');
+      if (ans) {
+        $('.loading').show();
+      } else {
+        $('.loading').hide();
+      }
+    }); /*eo game*/
+
+
+
+/*++++++++++++++++++++++
+  + Tab function +
+++++++++++++++++++++++*/
+
+
+
+  $('.tabz li a').click(function(event) {
+    event.preventDefault();
+    $('.tabz li').removeClass('active');
+    $(this).parent().addClass('active');
+
+    x = $(this).attr('href');
+    $('.tab-wrap .content').removeClass('active');
+    $(x).addClass('active');
+
+  });
+
+
+
+}); /*eo ready */
+
+function zeroOrOne(min, max) {
+  if (min) {
+    min = Math.ceil(min);
+  } else {
+    min = 0;
+  }
+  if (max) {
+    max = Math.floor(max);
+  } else {
+    max = 1;
+  }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+</script>
+    <p>Number of time the coin is flipped: <span id="gamesplayed">whatevre</span></p>
+    <p>Number of times you won: <span id="gameswon"></span></p>
+    <p>Number of times you lost: <span id="gameslost"></span></p>
+    <p>Success rate: <span id="suucessrate"></span></p>
+
+
+
+</body>
+</html>
