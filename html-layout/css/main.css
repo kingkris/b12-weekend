@@ -1,0 +1,333 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+section{
+    padding: 40px 0;
+}
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+header{
+    background-color: #000;
+}
+h1{
+    margin: 0;
+}
+.container{
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.container:after, .feature{
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo{
+    padding: 15px 0;
+    float: left;
+}
+.hamburger{
+    width: 36px;
+    height: 28px;
+    border: 1px solid #5ad697;
+    position: relative;
+    float: right;
+    margin-top: 27px;
+}
+.hamburger span{
+    width: 26px;
+    height: 3px;
+    background-color: #5ad697;
+    display: block;
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.hamburger span:first-child{
+    top: 6px;
+}
+.hamburger span:nth-child(2){
+    top: 12px;
+}
+.hamburger span:last-child{
+    top: 18px;
+}
+.main-menu ul{
+    padding-left: 0;
+    margin: 0;
+}
+.main-menu ul li{
+    list-style: none;
+    padding: 8px 0;
+}
+.main-menu ul li a{
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+}
+.main-menu ul li:hover a{
+    color: #5ad697;
+}
+/* banner style */
+.banner{
+    background-color: #ccc;
+    text-align: center;
+
+}
+/* features style */
+.feature{
+  padding: 20px 0;
+}
+.feature-img img{
+    border-radius: 50%;
+}
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media(max-width: 767px){
+    .main-menu{
+        padding-top: 70px;
+        display: none;
+    }
+    .main-menu ul li a{
+        border-bottom: 1px solid #212121;
+    }
+    .feature-img,.feature-text{
+        float: left;
+    }
+    .feature-img{
+        width:33.333% 
+    }
+    .feature-text{
+        width:66.666% 
+    }
+    .feature-img img{
+        width: 100%;
+    }
+    .fr{
+        float: right;
+    }
+}
+@media(min-width: 768px){
+    .hamburger{
+        display: none;
+    }
+    .main-menu{
+        float: right;
+    }
+    .main-menu ul li{
+        display: inline-block;
+    }
+    .main-menu ul li a{
+        padding: 19px 15px;
+    }
+    .container{
+        width: 750px;
+    }
+    .banner-text{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .span4{
+        width: 33.333%;
+        float: left;
+    }
+}
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
+    .banner-text{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
