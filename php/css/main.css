@@ -510,7 +510,93 @@ footer{
     content: "\e8e5";
 }
 
+/*Dabba */
 
+.dabba{
+  margin:20px;
+  background-color: wheat;
+  padding:20px;
+}
+.dabba:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+.box{
+  width:12.5%;
+  padding:5px;
+  float: left;
+}
+.box p{
+  margin:0;
+  padding:10px;
+  background-color: #fff;
+  min-height: 60px;
+  border-radius:6px;
+}
+
+
+/*Triangle*/
+
+.trianglex{
+  width:500px;
+  background-color: #53b43e;
+  margin:20px auto;
+  padding:20px;
+  border-radius: 10px;
+}
+.trianglex div:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.trianglex span{
+  font-size:20px;
+  line-height:25px;
+  width:20px;
+  height:20px;
+  float: left;
+  border:solid 1px rgba(0,255,0,.4);
+  transform: rotate(45deg);
+  color:transparent;
+  background-color: rgba(0,255,0,.4);
+}
+.triangle{
+  width:500px;
+  background-color: #53b43e;
+  margin:20px auto;
+  padding:20px;
+  border-radius: 10px;
+}
+.triangle div:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.triangle span{
+  font-size:20px;
+  line-height:25px;
+  width:20px;
+  height:20px;
+  float: left;
+  position: relative;
+}
+.triangle div:last-child span{
+  border-bottom:solid 1px white;
+}
+.triangle div span:first-child{
+  border-left:solid 1px white;
+}
+.triangle div span:last-child:after{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height:30px;
+  background-color: #fff;
+  right:0;
+  top:-5px;
+  transform: rotate(-45deg);
+}
 
 
 /* ==========================================================================

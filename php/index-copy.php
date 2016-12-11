@@ -36,7 +36,7 @@ $sitename = "Anything";
     <ul class="kg_site-links">
       <li <?php if($pagename == 'home')echo 'class="active"' ?> ><a href="index.php"><?php echo $sitename ?></a></li>
       <li class="has-submenu <?php if($pagename == 'about')echo 'active' ?> ">
-        <a href="about.php">About</a>
+        <a href="if-else.php">About</a>
         <ul>
           <li><a href="#">sublink02</a></li>
           <li><a href="#">sublink03</a></li>
@@ -44,7 +44,7 @@ $sitename = "Anything";
           <li><a href="#">sublink05</a></li>
         </ul>
       </li>
-      <li <?php if($pagename == 'blog')echo 'class="active"' ?> ><a href="blog.php">Blog</a></li>
+      <li <?php if($pagename == 'blog')echo 'class="active"' ?> ><a href="for-loop.php">Blog</a></li>
       <li <?php if($pagename == 'gallery')echo 'class="active"' ?> ><a href="gallery.php">Gallery</a></li>
       <li <?php if($pagename == 'contact')echo 'class="active"' ?> ><a href="contact.php">Contact</a></li>
     </ul>
